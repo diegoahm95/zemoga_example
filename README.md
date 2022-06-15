@@ -32,3 +32,6 @@ Some considerations:
 - Instead of directly adding favorites and deletions to Post classes, there was created a particular class for every case. This could be improved, however it was
   created like this since API didn't provide endpoints for similar process. Deletion particular case could be handled in a better way, and could be a good improvement
   if added + a cache solution for posts.
+  
+Some possible improvements:
+- We could verify SOLID principles compliance. Even with dagger, there is still some concretions dependency within some classes (for example some viewmodels or repositories which creates their own required instances)
