@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ListCardView" parent="CardView.Light">
+        <item name="cardCornerRadius">@dimen/card_cr</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="contentPadding">@dimen/card_padding</item>
+    </style>
+    <style name="TitleTextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">@dimen/title</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="DescriptionTextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">@dimen/description</item>
+    </style>
+</resources>

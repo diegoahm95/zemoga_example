@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.diegohurtado.zemoga.feature.list.view.ListFragment"
+        android:label="ListFragment" >
+        <action
+            android:id="@+id/listToDetails"
+            app:destination="@id/detailsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.diegohurtado.zemoga.feature.detail.view.DetailsFragment"
+        android:label="DetailsFragment" >
+        <argument
+            android:name="post"
+            app:argType="com.diegohurtado.zemoga.core.model.entities.Post" />
+    </fragment>
+</navigation>

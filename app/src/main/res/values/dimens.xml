@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- CardView -->
+    <dimen name="card_cr">10dp</dimen>
+    <dimen name="card_elevation">10dp</dimen>
+    <dimen name="card_padding">10dp</dimen>
+    <dimen name="internal_margin">5dp</dimen>
+    <!-- TextView -->
+    <dimen name="title">25sp</dimen>
+    <dimen name="description">20sp</dimen>
+    <dimen name="big_margin">25dp</dimen>
+</resources>

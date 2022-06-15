@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Zemoga</string>
+    <string name="missing_layout">Missing layout. You must set a layoutId in your fragment\'s init method</string>
+    <string name="favorite">Favorite toggle</string>
+    <string name="comments">Comments</string>
+    <string name="author_placeholder">%1s\n%2s\n%3s</string>
+    <string name="delete_post">Delete post</string>
+    <string name="favorite_post">Favorite</string>
+</resources>

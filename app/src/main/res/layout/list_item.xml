@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            type="com.diegohurtado.zemoga.core.model.entities.Post"
+            name="post"/>
+        <variable
+            type="com.diegohurtado.zemoga.feature.list.view.PostListener"
+            name="listener"/>
+        <variable
+            type="Boolean"
+            name="isFavorite"/>
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ListCardView"
+        android:onClick="@{() -> listener.onPostClicked(post)}"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_margin="@dimen/internal_margin">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <TextView
+                android:text="@{post.title}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/favorite_icon"
+                android:layout_marginEnd="@dimen/internal_margin" />
+
+            <ImageView
+                android:id="@+id/favorite_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_star"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:contentDescription="@string/favorite"
+                android:visibility="@{isFavorite ? View.VISIBLE : View.INVISIBLE}"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
